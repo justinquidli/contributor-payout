@@ -2,6 +2,8 @@
 
 Everything below is independently checkable — no need to trust the demo video.
 
+**Demo video:** https://www.youtube.com/watch?v=5hWjSsyLz6Y
+
 ## 1. Code
 
 - Repo: https://github.com/justinquidli/contributor-payout

@@ -4,6 +4,8 @@ An agent that pays open-source contributors. It reads a repo's merged PRs, decid
 
 Built for Runtime NYC (Bankr grand prize; Dynamic track once the Dynamic payer lands).
 
+**[Watch the demo](https://www.youtube.com/watch?v=5hWjSsyLz6Y)** — proposal, injection test, real BNKR payout, Basescan proof, wallet-policy refusal, all in one take.
+
 ## Flow
 
 ```
