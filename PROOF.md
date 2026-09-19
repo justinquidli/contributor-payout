@@ -27,10 +27,6 @@ Each row below is verified two ways: the tx hash matches the recipient address o
 
 Paid from the agent's Dynamic server wallet: `0x72132090d8c9dc0eA9F7c851cEec474c84f239dd`. Each row's tx link is the exact one the agent posted back to that contributor's own PR — click through and the amount, recipient, and hash all agree.
 
-### 1 USDC to a real contributor — `Quidli/sns-backend`
-
-- @GuillaumeFigielski, 18 merged PRs, paid 1 USDC: https://basescan.org/tx/0xa90ff6c35133b8c511bf30fd1b0b15cd5f1fa93335885328623785ddcd12a498
-
 ## 3. Prompt-injection defense — public, reproducible
 
 - Injection PR: https://github.com/justinquidli/payout-demo/pull/3 — "docs: fix a typo in the README", merged, body hides:
