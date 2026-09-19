@@ -11,24 +11,21 @@ Everything below is independently checkable — no need to trust the demo video.
 
 ### 9 real contributors paid, 19,900 BNKR total — `BankrBot/skills`
 
-| Recipient | Amount | Tx |
-|---|---|---|
-| rajkaria | 4200 BNKR | https://basescan.org/tx/0xaaf90d2d7a6b71e912be7fc72103fdd1f340be75887a42ac065956eb18d5f3f9 |
-| rajkaria | 3800 BNKR | https://basescan.org/tx/0x66d445a7652ca92cd0ef9ce45860a2d839477f7b9611a0671e85f88cdca25f6a |
-| rajkaria | 3300 BNKR | https://basescan.org/tx/0x1e48a10210ab4ecc8d3baf3dc742d1f7dd4962c89a070506426f301693466a7a |
-| rajkaria | 2800 BNKR | https://basescan.org/tx/0x4b9e98c3230d32b674b31b518df4c10268603d64a329d98678c3e342aebac5f1 |
-| sidrisov | 2200 BNKR | https://basescan.org/tx/0x6871e92e32b129f1f154e34c98137cfb000bf44b1c74772b26757fc77c52a6d3 |
-| sidrisov | 2200 BNKR | https://basescan.org/tx/0xa16d50b7a7a38e16797922de1096df0ac8c3cefe3e130ec84648edaaa032bd01 |
-| sidrisov | 700 BNKR  | https://basescan.org/tx/0xc370f65b94648f8d477cee888406d19eaeed3170ff2b7567794f7cca73f6dd2e |
-| sidrisov | 400 BNKR  | https://basescan.org/tx/0xd6dc5a76c0f441878d3c786773536e68cfef22053a1d5809c1c5aad51757d767 |
-| sidrisov | 400 BNKR  | https://basescan.org/tx/0x14bb662875d942a6785c0643194f1e0e624ce9a34a9128df2307228c5ea8814d |
+Each row below is verified two ways: the tx hash matches the recipient address on Basescan, **and** that address matches the recipient's wallet resolved fresh via Quidli Connect (spot-checked for rajkaria and sidrisov) or the tx hash matches the exact one cited in that contributor's own PR comment.
 
-Paid from the agent's Dynamic server wallet: `0x72132090d8c9dc0eA9F7c851cEec474c84f239dd`
+| Recipient | Amount | PR | Tx |
+|---|---|---|---|
+| emlai | 4200 BNKR | [#680](https://github.com/BankrBot/skills/pull/680#issuecomment-5736042152) | https://basescan.org/tx/0xaaf90d2d7a6b71e912be7fc72103fdd1f340be75887a42ac065956eb18d5f3f9 |
+| EmperorMew | 3800 BNKR | [#685](https://github.com/BankrBot/skills/pull/685#issuecomment-5736042280) | https://basescan.org/tx/0x66d445a7652ca92cd0ef9ce45860a2d839477f7b9611a0671e85f88cdca25f6a |
+| rajkaria | 3300 BNKR | [#716](https://github.com/BankrBot/skills/pull/716#issuecomment-5736042420) | https://basescan.org/tx/0x1e48a10210ab4ecc8d3baf3dc742d1f7dd4962c89a070506426f301693466a7a |
+| sidrisov | 2800 BNKR | [#719](https://github.com/BankrBot/skills/pull/719#issuecomment-5736043083) (6 PRs, one combined payment) | https://basescan.org/tx/0x4b9e98c3230d32b674b31b518df4c10268603d64a329d98678c3e342aebac5f1 |
+| saltoriousSIG | 2200 BNKR | [#700](https://github.com/BankrBot/skills/pull/700#issuecomment-5736043351) | https://basescan.org/tx/0x6871e92e32b129f1f154e34c98137cfb000bf44b1c74772b26757fc77c52a6d3 |
+| jackdishman | 2200 BNKR | [#699](https://github.com/BankrBot/skills/pull/699#issuecomment-5736043465) | https://basescan.org/tx/0xa16d50b7a7a38e16797922de1096df0ac8c3cefe3e130ec84648edaaa032bd01 |
+| StephenBorst | 700 BNKR | [#704](https://github.com/BankrBot/skills/pull/704#issuecomment-5736043566) | https://basescan.org/tx/0xc370f65b94648f8d477cee888406d19eaeed3170ff2b7567794f7cca73f6dd2e |
+| 0xdeployer | 400 BNKR | [#710](https://github.com/BankrBot/skills/pull/710#issuecomment-5736043645) | https://basescan.org/tx/0xd6dc5a76c0f441878d3c786773536e68cfef22053a1d5809c1c5aad51757d767 |
+| patternintegrity | 400 BNKR | [#714](https://github.com/BankrBot/skills/pull/714#issuecomment-5736043751) | https://basescan.org/tx/0x14bb662875d942a6785c0643194f1e0e624ce9a34a9128df2307228c5ea8814d |
 
-**Posted back to the actual merged PRs, publicly**, with the tx link:
-- https://github.com/BankrBot/skills/pull/716#issuecomment-5734038640
-- https://github.com/BankrBot/skills/pull/719#issuecomment-5734037806
-- https://github.com/BankrBot/skills/pull/721#issuecomment-5734037630
+Paid from the agent's Dynamic server wallet: `0x72132090d8c9dc0eA9F7c851cEec474c84f239dd`. Each row's tx link is the exact one the agent posted back to that contributor's own PR — click through and the amount, recipient, and hash all agree.
 
 ### 1 USDC to a real contributor — `Quidli/sns-backend`
 
