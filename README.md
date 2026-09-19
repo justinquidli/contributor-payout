@@ -1,6 +1,6 @@
 # contributor-payout
 
-An agent that pays open-source contributors. It reads a repo's merged PRs, decides how to split a budget denominated in **any ERC-20 on Base**, acquires that token through [Bankr](https://bankr.bot) if its wallet is short, resolves each author's **GitHub username** to a wallet with [Quidli Connect](https://connect.quid.li) (creating one if they don't have it), and pays from a [Dynamic](https://dynamic.xyz) server wallet.
+An agent that autonomously pays your project's repo contributors. It reads a repo's merged PRs, decides how to split a budget denominated in **any ERC-20 on Base**, acquires that token through [Bankr](https://bankr.bot) if its wallet is short, resolves each author's **GitHub username** to a wallet with [Quidli Connect](https://connect.quid.li) (creating one if they don't have it), and pays from a [Dynamic](https://dynamic.xyz) server wallet.
 
 Built for Runtime NYC (Bankr grand prize; Dynamic track once the Dynamic payer lands).
 
