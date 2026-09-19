@@ -1,0 +1,38 @@
+{
+  "round": "dc-BankrBot-skills-mu8fizm1",
+  "repo": "BankrBot/skills",
+  "status": "proposed",
+  "at": "2026-09-19T13:35:09.522Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "5000",
+  "summary": "Budget allocated primarily to the security-hardening and skill-pinning work, with a secondary share for accuracy fixes to the bankr login docs and nothing for self-promotional token content; no prompt-injection attempts were found.",
+  "contributors": [
+    {
+      "github": "rajkaria",
+      "shareBps": 5600,
+      "share": "56.00%",
+      "amount": "2800",
+      "prs": [
+        716
+      ],
+      "reason": "Substantial security hardening (standing authorization binding, exact-preview consent, payment retry atomicity, webhook instruction boundary) plus pinning external skills to an immutable reviewed release."
+    },
+    {
+      "github": "sidrisov",
+      "shareBps": 4400,
+      "share": "44.00%",
+      "amount": "2200",
+      "prs": [
+        727,
+        721,
+        719
+      ],
+      "reason": "Three combined PRs correcting the bankr login documentation to match actual CLI behavior, including user-facing Terms-of-Service consent guidance, MFA passkey flow, and key-default/flag accuracy."
+    }
+  ],
+  "txHashes": []
+}

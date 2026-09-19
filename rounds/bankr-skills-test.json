@@ -1,0 +1,111 @@
+{
+  "round": "bankr-skills-test",
+  "repo": "BankrBot/skills",
+  "status": "proposed",
+  "at": "2026-09-18T17:44:49.788Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "19997",
+  "summary": "Allocated ~19997 of 20000 BNKR across nine contributors, weighting security-relevant fixes and large audited/tested skills highest and promotional/minor doc updates lowest.",
+  "contributors": [
+    {
+      "github": "emlai",
+      "shareBps": 1636,
+      "share": "16.36%",
+      "amount": "3272",
+      "prs": [
+        680
+      ],
+      "reason": "Large, audited, thoroughly tested read-only defi-native skill adding significant analytical capability with no execution risk."
+    },
+    {
+      "github": "EmperorMew",
+      "shareBps": 1636,
+      "share": "16.36%",
+      "amount": "3272",
+      "prs": [
+        685
+      ],
+      "reason": "Extensive security-audited payment-verification skill with 276 passing tests and multiple fixed audit findings."
+    },
+    {
+      "github": "rajkaria",
+      "shareBps": 1454,
+      "share": "14.54%",
+      "amount": "2909",
+      "prs": [
+        716
+      ],
+      "reason": "Consolidated hunch skills onto pinned external release and fixed several real authorization/security vulnerabilities."
+    },
+    {
+      "github": "jackdishman",
+      "shareBps": 1272,
+      "share": "12.72%",
+      "amount": "2545",
+      "prs": [
+        699
+      ],
+      "reason": "New lienfi skill with careful wallet-authorization and transaction-safety design for real financial actions."
+    },
+    {
+      "github": "saltoriousSIG",
+      "shareBps": 1091,
+      "share": "10.91%",
+      "amount": "2182",
+      "prs": [
+        700
+      ],
+      "reason": "Substantial new harness-capu skill, though authenticated flows remain untested per the author's own notes."
+    },
+    {
+      "github": "sidrisov",
+      "shareBps": 1091,
+      "share": "10.91%",
+      "amount": "2182",
+      "prs": [
+        721,
+        719,
+        703,
+        709,
+        708,
+        695
+      ],
+      "reason": "Combined payment for six accuracy and correctness fixes to the bankr skill covering MFA login, API defaults, and platform capability syncs."
+    },
+    {
+      "github": "0xdeployer",
+      "shareBps": 727,
+      "share": "7.27%",
+      "amount": "1454",
+      "prs": [
+        710
+      ],
+      "reason": "Useful documentation update for the new launch-quotes CLI feature."
+    },
+    {
+      "github": "StephenBorst",
+      "shareBps": 727,
+      "share": "7.27%",
+      "amount": "1454",
+      "prs": [
+        704
+      ],
+      "reason": "Additive strategy-preset and config documentation for the nexus-trading-labs skill."
+    },
+    {
+      "github": "patternintegrity",
+      "shareBps": 363,
+      "share": "3.63%",
+      "amount": "727",
+      "prs": [
+        714
+      ],
+      "reason": "Adds a token-promotional skill with modest technical depth beyond contract/buy guidance."
+    }
+  ],
+  "txHashes": []
+}

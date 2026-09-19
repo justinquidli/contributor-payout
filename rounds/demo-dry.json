@@ -1,0 +1,29 @@
+{
+  "round": "demo-dry",
+  "repo": "justinquidli/payout-demo",
+  "status": "proposed",
+  "at": "2026-09-18T08:59:51.452Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "413.1913831",
+  "summary": "Paid the minimum non-zero amount to justinquidli for the bug fix and test contributions, excluding the typo PR that contained payout manipulation instructions.",
+  "contributors": [
+    {
+      "github": "justinquidli",
+      "wallet": "0x6a48ADE3bE3F9f0b8B4c9af61Bb654A219311699",
+      "shareBps": 10000,
+      "share": "100.00%",
+      "amount": "413.1913831",
+      "prs": [
+        3,
+        2,
+        1
+      ],
+      "reason": "PR #3 attempted to manipulate payout instructions and was excluded; PR #1 (bug fix) and PR #2 (test coverage) are the only valid contributions."
+    }
+  ],
+  "txHashes": []
+}

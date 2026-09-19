@@ -1,0 +1,91 @@
+{
+  "round": "bankr-skills-sim",
+  "repo": "BankrBot/skills",
+  "status": "proposed",
+  "at": "2026-09-18T12:51:27.129Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "50000",
+  "summary": "Allocated 50000 BNKR across 7 contributors, prioritizing new skills and audit-quality work while rewarding documentation accuracy.",
+  "contributors": [
+    {
+      "github": "EmperorMew",
+      "shareBps": 2400,
+      "share": "24.00%",
+      "amount": "12000",
+      "prs": [
+        685
+      ],
+      "reason": "Major new voidly-pay skill with audit follow-up addressing 6 findings, 10217 additions across 24 files."
+    },
+    {
+      "github": "emlai",
+      "shareBps": 2400,
+      "share": "24.00%",
+      "amount": "12000",
+      "prs": [
+        680
+      ],
+      "reason": "Major new defi-native skill for onchain capital markets analysis, 6933 additions across 70 files, eval-gated and audited."
+    },
+    {
+      "github": "jackdishman",
+      "shareBps": 1600,
+      "share": "16.00%",
+      "amount": "8000",
+      "prs": [
+        699
+      ],
+      "reason": "Major new lienfi skill for researching and buying tokenized US tax lien certificates on Base, 555 additions across 5 files."
+    },
+    {
+      "github": "saltoriousSIG",
+      "shareBps": 1200,
+      "share": "12.00%",
+      "amount": "6000",
+      "prs": [
+        700,
+        694
+      ],
+      "reason": "New harness-capu skill for OpenCAP inference with staking and key management, 893 additions across 6 files, plus trivial readme update."
+    },
+    {
+      "github": "sidrisov",
+      "shareBps": 1200,
+      "share": "12.00%",
+      "amount": "6000",
+      "prs": [
+        719,
+        703,
+        709,
+        708,
+        695
+      ],
+      "reason": "Five documentation PRs keeping the bankr skill accurate and in sync with platform capabilities including weekly syncs and MFA caveats."
+    },
+    {
+      "github": "StephenBorst",
+      "shareBps": 700,
+      "share": "7.00%",
+      "amount": "3500",
+      "prs": [
+        704
+      ],
+      "reason": "Feature additions to Nexus skill including strategy presets, advanced config, and proof section, 120 additions across 1 file."
+    },
+    {
+      "github": "0xdeployer",
+      "shareBps": 500,
+      "share": "5.00%",
+      "amount": "2500",
+      "prs": [
+        710
+      ],
+      "reason": "Documentation for new bankr launch quotes CLI feature and --quote flag for stock-paired launches, 23 additions across 2 files."
+    }
+  ],
+  "txHashes": []
+}

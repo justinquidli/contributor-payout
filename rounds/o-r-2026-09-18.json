@@ -1,0 +1,39 @@
+{
+  "round": "o-r-2026-09-18",
+  "repo": "o/r",
+  "status": "paid",
+  "at": "2026-09-18T20:48:57.119Z",
+  "token": {
+    "symbol": "USDC",
+    "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+    "decimals": 6
+  },
+  "total": "3",
+  "contributors": [
+    {
+      "github": "alice",
+      "wallet": "0x1111111111111111111111111111111111111111",
+      "shareBps": 6666,
+      "share": "66.66%",
+      "amount": "2",
+      "prs": [
+        1
+      ],
+      "reason": ""
+    },
+    {
+      "github": "bob",
+      "wallet": "0x2222222222222222222222222222222222222222",
+      "shareBps": 3333,
+      "share": "33.33%",
+      "amount": "1",
+      "prs": [
+        2
+      ],
+      "reason": ""
+    }
+  ],
+  "txHashes": [
+    "0xcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd"
+  ]
+}

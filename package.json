@@ -1,0 +1,24 @@
+{
+  "name": "contributor-payout",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Agent that reads merged PRs, decides a split in any ERC-20, acquires the token through Bankr if short, and pays contributors by GitHub username via Quidli Connect from a Dynamic or Connect wallet.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "payout": "node --env-file=.env payout.js",
+    "dynamic:setup": "node --env-file=.env scripts/dynamic-setup.js",
+    "test": "node --test test/*.test.js",
+    "treasury:acquire": "node --env-file=.env scripts/treasury-acquire.js",
+    "policy:list": "node --env-file=.env scripts/policy-sync.js --list",
+    "policy:sync": "node --env-file=.env scripts/policy-sync.js",
+    "dynamic:selftest": "node --env-file=.env scripts/dynamic-selftest.js"
+  },
+  "dependencies": {
+    "@dynamic-labs-wallet/core": "^1.1.11",
+    "@dynamic-labs-wallet/node-evm": "^1.1.11",
+    "viem": "^2.56.7"
+  }
+}

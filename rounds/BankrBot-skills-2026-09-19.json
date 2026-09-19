@@ -1,0 +1,37 @@
+{
+  "round": "BankrBot-skills-2026-09-19",
+  "repo": "BankrBot/skills",
+  "status": "proposed",
+  "at": "2026-09-19T08:35:54.418Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "4400",
+  "summary": "Budget concentrated on the security-hardening and skill-pinning PR, with a smaller share for the factual bankr documentation fixes and nothing for the promotional token listing.",
+  "contributors": [
+    {
+      "github": "rajkaria",
+      "shareBps": 6818,
+      "share": "68.18%",
+      "amount": "3000",
+      "prs": [
+        716
+      ],
+      "reason": "Substantial work pinning external skills to an immutable reviewed release plus multiple concrete authorization, consent, payment-retry and webhook-injection safety fixes."
+    },
+    {
+      "github": "sidrisov",
+      "shareBps": 3181,
+      "share": "31.81%",
+      "amount": "1400",
+      "prs": [
+        721,
+        719
+      ],
+      "reason": "Two accurate documentation corrections to the bankr skill (MFA headless login flow and API-key default flags) that prevent agents from following outdated, broken instructions."
+    }
+  ],
+  "txHashes": []
+}

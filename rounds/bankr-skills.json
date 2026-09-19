@@ -1,0 +1,139 @@
+{
+  "round": "bankr-skills",
+  "repo": "BankrBot/skills",
+  "status": "paid",
+  "at": "2026-09-18T20:53:28.130Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "20000",
+  "summary": "Budget fully allocated with the largest shares to substantial new skills, security hardening, and documentation-accuracy fixes; no prompt-injection attempts were found in the PR data.",
+  "contributors": [
+    {
+      "github": "emlai",
+      "wallet": "0x192E658a793936328016eBe69D747d2AD6531b28",
+      "shareBps": 2100,
+      "share": "21.00%",
+      "amount": "4200",
+      "prs": [
+        680
+      ],
+      "reason": "Large, eval-gated read-only analysis skill (70 files) adding substantial durable capability with verified source manifest.",
+      "txHash": "0xaaf90d2d7a6b71e912be7fc72103fdd1f340be75887a42ac065956eb18d5f3f9"
+    },
+    {
+      "github": "EmperorMew",
+      "wallet": "0x47D7b99582f37618517018A9eCFb07258251556A",
+      "shareBps": 1900,
+      "share": "19.00%",
+      "amount": "3800",
+      "prs": [
+        685
+      ],
+      "reason": "Substantial new prepare-and-verify skill with six audit findings fixed and 276 passing regression tests.",
+      "txHash": "0x66d445a7652ca92cd0ef9ce45860a2d839477f7b9611a0671e85f88cdca25f6a"
+    },
+    {
+      "github": "rajkaria",
+      "wallet": "0xB17338C469D5D0D09D11cfc81DD12d816D7785DE",
+      "shareBps": 1650,
+      "share": "16.50%",
+      "amount": "3300",
+      "prs": [
+        716
+      ],
+      "reason": "High-impact security hardening (authorization scoping, consent pinning, payment retry safety, webhook instruction boundary) plus pinned external listings.",
+      "txHash": "0x1e48a10210ab4ecc8d3baf3dc742d1f7dd4962c89a070506426f301693466a7a"
+    },
+    {
+      "github": "sidrisov",
+      "wallet": "0x1eea0D4ACc11faD36Bb1365C9fbc822418c818ab",
+      "shareBps": 1400,
+      "share": "14.00%",
+      "amount": "2800",
+      "prs": [
+        695,
+        708,
+        709,
+        703,
+        719,
+        721
+      ],
+      "reason": "Six PRs correcting factually wrong platform documentation (launch quotas, key defaults, MFA login) that would have misled agents.",
+      "txHash": "0x4b9e98c3230d32b674b31b518df4c10268603d64a329d98678c3e342aebac5f1"
+    },
+    {
+      "github": "saltoriousSIG",
+      "wallet": "0xDbB3BF994Ba4544f9929B0474C25f164BBC5b6d9",
+      "shareBps": 1100,
+      "share": "11.00%",
+      "amount": "2200",
+      "prs": [
+        700
+      ],
+      "reason": "New inference-funding skill with API/contract references and documented live validation and limitations.",
+      "txHash": "0x6871e92e32b129f1f154e34c98137cfb000bf44b1c74772b26757fc77c52a6d3"
+    },
+    {
+      "github": "jackdishman",
+      "wallet": "0xc6422616CFA91767D1F090Ef2517e2238c883617",
+      "shareBps": 1100,
+      "share": "11.00%",
+      "amount": "2200",
+      "prs": [
+        699
+      ],
+      "reason": "New tokenized tax-lien skill with clear auth, purchase flow, and refusal-code reference.",
+      "txHash": "0xa16d50b7a7a38e16797922de1096df0ac8c3cefe3e130ec84648edaaa032bd01"
+    },
+    {
+      "github": "StephenBorst",
+      "wallet": "0xF99ca0BbB1E18a644375d9FeE48868b2fF5e81e5",
+      "shareBps": 350,
+      "share": "3.50%",
+      "amount": "700",
+      "prs": [
+        704
+      ],
+      "reason": "Meaningful additive skill expansion (presets, advanced config, proof section) with security rules left intact.",
+      "txHash": "0xc370f65b94648f8d477cee888406d19eaeed3170ff2b7567794f7cca73f6dd2e"
+    },
+    {
+      "github": "0xdeployer",
+      "wallet": "0x2D570B29Cb078Ef696E9216c9Dd0c5975F0A0686",
+      "shareBps": 200,
+      "share": "2.00%",
+      "amount": "400",
+      "prs": [
+        710
+      ],
+      "reason": "Small but accurate documentation of a new quote-token endpoint and CLI flags.",
+      "txHash": "0xd6dc5a76c0f441878d3c786773536e68cfef22053a1d5809c1c5aad51757d767"
+    },
+    {
+      "github": "patternintegrity",
+      "wallet": "0x3DF2825Bb8D1a9De5E5a72BB8BA861f6ABF4cCE7",
+      "shareBps": 200,
+      "share": "2.00%",
+      "amount": "400",
+      "prs": [
+        714
+      ],
+      "reason": "Adds a complete skill but content is largely promotional token marketing with limited reusable utility.",
+      "txHash": "0x14bb662875d942a6785c0643194f1e0e624ce9a34a9128df2307228c5ea8814d"
+    }
+  ],
+  "txHashes": [
+    "0xaaf90d2d7a6b71e912be7fc72103fdd1f340be75887a42ac065956eb18d5f3f9",
+    "0x66d445a7652ca92cd0ef9ce45860a2d839477f7b9611a0671e85f88cdca25f6a",
+    "0x1e48a10210ab4ecc8d3baf3dc742d1f7dd4962c89a070506426f301693466a7a",
+    "0x4b9e98c3230d32b674b31b518df4c10268603d64a329d98678c3e342aebac5f1",
+    "0x6871e92e32b129f1f154e34c98137cfb000bf44b1c74772b26757fc77c52a6d3",
+    "0xa16d50b7a7a38e16797922de1096df0ac8c3cefe3e130ec84648edaaa032bd01",
+    "0xc370f65b94648f8d477cee888406d19eaeed3170ff2b7567794f7cca73f6dd2e",
+    "0xd6dc5a76c0f441878d3c786773536e68cfef22053a1d5809c1c5aad51757d767",
+    "0x14bb662875d942a6785c0643194f1e0e624ce9a34a9128df2307228c5ea8814d"
+  ]
+}
