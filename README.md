@@ -106,6 +106,17 @@ down, and publish each round before it pays so it can be challenged.
 
 Not built. The rounds recorded today are the input it would need.
 
+## How recipients access what they're paid
+
+A payout goes to the recipient's own wallet the moment it's resolved by Connect — nothing sits in an
+intermediate custodial balance the agent holds on their behalf. A contributor who doesn't yet have a
+wallet gets one provisioned automatically on lookup, tied to their GitHub identity.
+
+To see and manage those funds, a recipient signs in to **[dapp.quid.li](https://dapp.quid.li)** by
+authenticating with the same GitHub account their PRs were merged under. That login is what proves
+"this wallet is mine" — no separate signup, no address to copy out of a Discord message, no private
+key to receive. Whoever merged the PR is whoever can log in and see the payout.
+
 ## Known limits
 
 - The PR list is capped at 50 per run.
