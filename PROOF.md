@@ -29,6 +29,23 @@ Each row below is verified two ways: the tx hash matches the recipient address o
 
 Paid from the agent's Dynamic server wallet: `0x72132090d8c9dc0eA9F7c851cEec474c84f239dd`. Each row's tx link is the exact one the agent posted back to that contributor's own PR — click through and the amount, recipient, and hash all agree.
 
+### Same agent, run from Discord (DiscoCentaur) — 4850 BNKR to 4 contributors, `BankrBot/skills`
+
+The identical `payout` pipeline, triggered by a single Discord message and confirmed with a
+held-action code, not the terminal. Recipient wallets and tx hashes come straight from the
+round file the agent wrote (`dc-BankrBot-skills-mu8gyces.json`), and every hash below is
+independently confirmed successful on Base via Blockscout.
+
+| Recipient | Amount | Wallet | Tx |
+|---|---|---|---|
+| sidrisov | 1950 BNKR (6 PRs: #703, #708, #709, #719, #721, #727) | `0x1eea0D4ACc11faD36Bb1365C9fbc822418c818ab` | https://basescan.org/tx/0xc53d090d8e1da484f4b2e99e49c867bc5a2859e2e7a698412636eacdacc89033 |
+| rajkaria | 1850 BNKR (PR #716) | `0xB17338C469D5D0D09D11cfc81DD12d816D7785DE` | https://basescan.org/tx/0xa845a809b0c990f0e8ff7389b9d84e17a9acb4990a77b4ebcb53c18f0a1169c5 |
+| 0xdeployer | 600 BNKR (PR #710) | `0x2D570B29Cb078Ef696E9216c9Dd0c5975F0A0686` | https://basescan.org/tx/0x478e19f7b4e215aa91ed6d12e57944d8b80d371b9e5a396d15d625bc50815914 |
+| patternintegrity | 450 BNKR (PR #714) | `0x3DF2825Bb8D1a9De5E5a72BB8BA861f6ABF4cCE7` | https://basescan.org/tx/0x35ca6100e1887b12e56066f5b126ea48fb35afe51cc73fb1b5dd385da3395b28 |
+
+Same wallet, same rails, same rounds ledger as the terminal — a Discord message is just another
+caller of the same `payout` tool, gated by a confirm code instead of typing "send".
+
 ## 3. Prompt-injection defense — public, reproducible
 
 - Injection PR: https://github.com/justinquidli/payout-demo/pull/3 — "docs: fix a typo in the README", merged, body hides:
