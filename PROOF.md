@@ -11,7 +11,7 @@ Everything below is independently checkable — no need to trust the demo video.
 
 ## 2. Real on-chain payments (Base mainnet)
 
-### 9 real contributors paid, 19,900 BNKR total — `BankrBot/skills`
+### 9 real contributors paid, 19,900 BNKR total — `BankrBot/skills` (terminal, `--since 14d`)
 
 Each row below is verified two ways: the tx hash matches the recipient address on Basescan, **and** that address matches the recipient's wallet resolved fresh via Quidli Connect (spot-checked for rajkaria and sidrisov) or the tx hash matches the exact one cited in that contributor's own PR comment.
 
