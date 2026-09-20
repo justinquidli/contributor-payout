@@ -32,9 +32,12 @@ Paid from the agent's Dynamic server wallet: `0x72132090d8c9dc0eA9F7c851cEec474c
 ### Same agent, run from Discord (DiscoCentaur) — 4850 BNKR to 4 contributors, `BankrBot/skills`
 
 The identical `payout` pipeline, triggered by a single Discord message and confirmed with a
-held-action code, not the terminal. Recipient wallets and tx hashes come straight from the
-round file the agent wrote (`dc-BankrBot-skills-mu8gyces.json`), and every hash below is
-independently confirmed successful on Base via Blockscout.
+held-action code, not the terminal — and with different parameters than the terminal run: merged
+PRs from the **past 3 days** only (`--since 3d`), vs. the terminal run's wider window, so this is
+a genuinely separate query against the same repo, not a re-run of the same result. Recipient
+wallets and tx hashes come straight from the round file the agent wrote
+(`dc-BankrBot-skills-mu8gyces.json`), and every hash below is independently confirmed successful
+on Base via Blockscout.
 
 | Recipient | Amount | Wallet | Tx |
 |---|---|---|---|
