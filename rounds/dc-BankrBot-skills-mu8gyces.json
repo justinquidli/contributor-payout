@@ -1,0 +1,74 @@
+{
+  "round": "dc-BankrBot-skills-mu8gyces",
+  "repo": "BankrBot/skills",
+  "status": "paid",
+  "at": "2026-09-19T14:16:31.967Z",
+  "token": {
+    "symbol": "BNKR",
+    "address": "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    "decimals": 18
+  },
+  "total": "4850",
+  "summary": "Rewarded correctness and security work most heavily, documentation-sync work moderately, and a promotional new-skill addition at a small amount, spending 4850 of the 5000 BNKR budget.",
+  "contributors": [
+    {
+      "github": "sidrisov",
+      "wallet": "0x1eea0D4ACc11faD36Bb1365C9fbc822418c818ab",
+      "shareBps": 4020,
+      "share": "40.20%",
+      "amount": "1950",
+      "prs": [
+        727,
+        721,
+        719,
+        703,
+        708,
+        709
+      ],
+      "reason": "Combined payment for five accurate, high-value documentation-correctness PRs (#703, #708, #709, #719, #721, #727) that fixed misleading login/MFA/terms/API-key guidance agents would otherwise act on.",
+      "txHash": "0xc53d090d8e1da484f4b2e99e49c867bc5a2859e2e7a698412636eacdacc89033"
+    },
+    {
+      "github": "rajkaria",
+      "wallet": "0xB17338C469D5D0D09D11cfc81DD12d816D7785DE",
+      "shareBps": 3814,
+      "share": "38.14%",
+      "amount": "1850",
+      "prs": [
+        716
+      ],
+      "reason": "Substantial security-hardening work: pinned external skill listings plus fixes to standing authorization, exact-preview consent, payment retry idempotency and webhook instruction boundaries.",
+      "txHash": "0xa845a809b0c990f0e8ff7389b9d84e17a9acb4990a77b4ebcb53c18f0a1169c5"
+    },
+    {
+      "github": "0xdeployer",
+      "wallet": "0x2D570B29Cb078Ef696E9216c9Dd0c5975F0A0686",
+      "shareBps": 1237,
+      "share": "12.37%",
+      "amount": "600",
+      "prs": [
+        710
+      ],
+      "reason": "Documented the new launch quote-token picker and endpoint, keeping the skill aligned with real CLI/API capabilities.",
+      "txHash": "0x478e19f7b4e215aa91ed6d12e57944d8b80d371b9e5a396d15d625bc50815914"
+    },
+    {
+      "github": "patternintegrity",
+      "wallet": "0x3DF2825Bb8D1a9De5E5a72BB8BA861f6ABF4cCE7",
+      "shareBps": 927,
+      "share": "9.27%",
+      "amount": "450",
+      "prs": [
+        714
+      ],
+      "reason": "New skill is complete and well-structured but is largely self-promotional token marketing content with limited impact for other users.",
+      "txHash": "0x35ca6100e1887b12e56066f5b126ea48fb35afe51cc73fb1b5dd385da3395b28"
+    }
+  ],
+  "txHashes": [
+    "0xc53d090d8e1da484f4b2e99e49c867bc5a2859e2e7a698412636eacdacc89033",
+    "0xa845a809b0c990f0e8ff7389b9d84e17a9acb4990a77b4ebcb53c18f0a1169c5",
+    "0x478e19f7b4e215aa91ed6d12e57944d8b80d371b9e5a396d15d625bc50815914",
+    "0x35ca6100e1887b12e56066f5b126ea48fb35afe51cc73fb1b5dd385da3395b28"
+  ]
+}
