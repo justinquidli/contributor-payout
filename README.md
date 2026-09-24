@@ -26,7 +26,7 @@ npm run payout -- --repo owner/name --token 0xb9a1…ba3 --budget 500 --fund-wit
 
 ```bash
 npm install              # Dynamic SDK + viem (only used by --payer dynamic)
-cp .env.example .env     # fill GITHUB_TOKEN (gh auth token), CONNECT_API_KEY, LLM_*
+cp .env.example .env     # fill GITHUB_TOKEN (gh auth token), CONNECT_API_KEY, LLM_*; BANKR_API_KEY to buy the reward token when short
 npm test
 ```
 
@@ -62,7 +62,7 @@ The model only proposes. A plan is rejected **as a whole** if any of these fail:
 - the reward token comes from `--token`, so no PR text can switch the payout to another token
 - a symbol matching several contracts on Base errors with the candidates instead of guessing
 - no duplicates, no `--exclude`d users, bots skipped
-- payer must hold the USDC and some ETH for gas
+- payer must hold ETH for gas and enough of the reward token; if it is short and `BANKR_API_KEY` is set, it buys the difference through Bankr first (see Treasury), otherwise the run stops
 
 `ledger.json` records every run: PRs are never paid twice, and a send that fails or times out stays **pending** and blocks further runs until you check Basescan and pass `--clear-pending`. Amounts are handled as integer units (no floats).
 
@@ -81,6 +81,20 @@ Connect always resolves usernames. Who holds and signs the money is `--payer`:
    - `dynamic-shares.json`: your secret key share (chmod 600).
 3. Fund the printed address on Base with USDC plus a little ETH for gas.
 4. `npm run payout -- --payer dynamic --repo … --budget …`
+
+### Wallet policy (Dynamic)
+
+The caps above are also pushed to the Dynamic wallet, so the wallet itself refuses an over-cap payment before signing, even if the code had a bug.
+
+```bash
+npm run policy:sync -- USDC BNKR   # per-transaction limit = MAX_PER_RECIPIENT_<SYM>, else MAX_PER_RECIPIENT_USD at today's price
+npm run policy:list                # show the rules Dynamic enforces
+
+# Prove the wallet signs and sends (default 0.05 USDC)
+npm run dynamic:selftest -- 0xRecipient [amount] [TOKEN]
+# Show the policy refusing an over-cap send: --force skips our own checks so the wallet decides
+npm run dynamic:selftest -- 0xRecipient 2000 BNKR --force
+```
 
 ## Rounds
 

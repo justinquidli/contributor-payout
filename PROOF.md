@@ -64,4 +64,4 @@ caller of the same `payout` tool, gated by a confirm code instead of typing "sen
 
 1. **Code rails** — recipient must be an actual merged-PR author, hard budget/per-recipient caps, no double-pay via `ledger.json`, dry-run by default, human types "send".
 2. **Wallet policy (Dynamic)** — per-transaction value cap enforced by the MPC wallet itself, before signing, outside our code.
-3. **Human confirmation** — nothing executes without an explicit `--execute --yes` (terminal) or a typed confirm code (Discord).
+3. **Human confirmation** — nothing executes without `--execute` plus a human typing "send" (terminal) or a confirm code (Discord). `--yes` skips the typed confirmation and exists only for deliberate unattended runs.
