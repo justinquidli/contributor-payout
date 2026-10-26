@@ -1,5 +1,10 @@
 const API = 'https://api.github.com';
 const MAX_PRS = 50;
+// Per-PR diff caps. Most merged PRs carry only a few hundred characters of
+// patch, so these rarely bite; they exist so one large refactor cannot crowd
+// everything else out of the model's context.
+const MAX_FILES_PER_PR = 20;
+const MAX_PATCH_CHARS = 2000;
 
 function headers(token) {
   const h = {
@@ -20,6 +25,39 @@ async function gh(path, token, init = {}) {
 
 export function isBot(user) {
   return !user || user.type === 'Bot' || /\[bot\]$/i.test(user.login);
+}
+
+
+/**
+ * Filenames and patches for one PR, trimmed to the caps above.
+ *
+ * GitHub omits `patch` for binary and very large files; the filename and the
+ * add/delete counts still say what changed, which is enough to judge it.
+ *
+ * A failure here degrades to no diff rather than aborting the round: the PR is
+ * still scored on its title, body and size, exactly as it was before.
+ */
+async function fetchPRFiles(repo, number, token) {
+  let list;
+  try {
+    list = await gh(`/repos/${repo}/pulls/${number}/files?per_page=100`, token);
+  } catch (err) {
+    return { files: [], omittedFiles: 0, filesError: String(err.message ?? err) };
+  }
+  const files = list.slice(0, MAX_FILES_PER_PR).map((f) => {
+    const patch = f.patch ?? '';
+    return {
+      filename: f.filename,
+      status: f.status,
+      additions: f.additions,
+      deletions: f.deletions,
+      patch:
+        patch.length > MAX_PATCH_CHARS
+          ? `${patch.slice(0, MAX_PATCH_CHARS)}\n...[patch truncated]`
+          : patch,
+    };
+  });
+  return { files, omittedFiles: Math.max(0, list.length - MAX_FILES_PER_PR) };
 }
 
 /** Merged PRs in `repo` ("owner/name") merged at or after `since` (Date). */
@@ -43,6 +81,7 @@ export async function fetchMergedPRs(repo, since, token) {
   const detailed = [];
   for (const pr of out.slice(0, MAX_PRS)) {
     const d = await gh(`/repos/${repo}/pulls/${pr.number}`, token);
+    const { files, omittedFiles, filesError } = await fetchPRFiles(repo, pr.number, token);
     detailed.push({
       number: d.number,
       url: d.html_url,
@@ -53,6 +92,9 @@ export async function fetchMergedPRs(repo, since, token) {
       additions: d.additions,
       deletions: d.deletions,
       changedFiles: d.changed_files,
+      files,
+      omittedFiles,
+      ...(filesError ? { filesError } : {}),
     });
   }
   return detailed;
