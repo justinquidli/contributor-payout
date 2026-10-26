@@ -92,6 +92,7 @@ export async function fetchMergedPRs(repo, since, token) {
       additions: d.additions,
       deletions: d.deletions,
       changedFiles: d.changed_files,
+      headRef: d.head?.ref ?? null,
       files,
       omittedFiles,
       ...(filesError ? { filesError } : {}),

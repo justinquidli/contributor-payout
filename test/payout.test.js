@@ -318,3 +318,47 @@ test('still rejected after the correction pass = nothing sent', async () => {
   assert.equal(r.status, 'rejected');
   assert.equal(f.sent.length, 0);
 });
+
+test('a release PR (dev -> main) is skipped: the merger is not the author', async () => {
+  // #4 is the shape of a dev->main release PR: it carries alice's commits from
+  // #1, but GitHub reports the person who opened it as the author.
+  const withRelease = [
+    ...prs,
+    { number: 4, author: 'carol', title: 'Merge pull request #1', body: '', additions: 40, deletions: 5, changedFiles: 2, headRef: 'dev' },
+  ];
+  const plan = { payments: [{ github: 'alice', amount: '1', reason: 'fix' }] };
+  const f = fakeDeps(plan);
+  f.deps.fetchPRs = async () => withRelease;
+
+  let seen = null;
+  f.deps.propose = async (given) => {
+    seen = given;
+    return plan;
+  };
+
+  await run({ ...baseOpts, excludeBranches: ['dev', 'develop', 'staging'] }, f.deps);
+
+  assert.deepEqual(
+    seen.map((p) => p.number),
+    [1, 2, 3],
+    'the release PR must never reach the model',
+  );
+  assert.ok(
+    f.logs.some((l) => l.includes('skipped #4') && l.includes('dev')),
+    'skipping must be logged, not silent',
+  );
+});
+
+test('without excludeBranches configured, nothing is filtered by branch', async () => {
+  const withRelease = [
+    ...prs,
+    { number: 4, author: 'carol', title: 'Merge pull request #1', body: '', additions: 40, deletions: 5, changedFiles: 2, headRef: 'dev' },
+  ];
+  const f = fakeDeps({ payments: [] });
+  f.deps.fetchPRs = async () => withRelease;
+  let seen = null;
+  f.deps.propose = async (given) => { seen = given; return { payments: [] }; };
+
+  await run({ ...baseOpts }, f.deps);
+  assert.deepEqual(seen.map((p) => p.number), [1, 2, 3, 4]);
+});

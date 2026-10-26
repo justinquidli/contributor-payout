@@ -58,11 +58,24 @@ export async function run(opts, deps) {
   const exclude = opts.exclude;
   const alreadyPaid = deps.ledger.paidPRs(repo);
   const all = await deps.fetchPRs(repo, opts.since);
+
+  // A release PR (dev -> main) carries other people's commits under whoever
+  // opened it, so paying its author would credit the merger for the work.
+  // Those commits are already paid through their own PRs.
+  const excludeBranches = new Set((opts.excludeBranches ?? []).map((b) => b.toLowerCase()));
+  const releasePRs = all.filter((p) => p.headRef && excludeBranches.has(p.headRef.toLowerCase()));
+
   const prs = all.filter(
-    (p) => !alreadyPaid.has(p.number) && !exclude.map((e) => e.toLowerCase()).includes(p.author.toLowerCase()),
+    (p) =>
+      !alreadyPaid.has(p.number) &&
+      !exclude.map((e) => e.toLowerCase()).includes(p.author.toLowerCase()) &&
+      !(p.headRef && excludeBranches.has(p.headRef.toLowerCase())),
   );
 
   log(`\n${repo}: ${all.length} merged PR(s) since ${opts.since.toISOString().slice(0, 10)}, ${prs.length} eligible`);
+  for (const p of releasePRs) {
+    log(`  skipped #${p.number} @${p.author} — merge from ${p.headRef} (work is credited via its own PRs)`);
+  }
   for (const p of prs) log(`  #${p.number} @${p.author} +${p.additions}/-${p.deletions}  ${p.title}`);
   if (prs.length === 0) return { status: 'nothing-to-pay' };
 
@@ -199,6 +212,7 @@ async function main() {
       since: { type: 'string', default: '7d' },
       budget: { type: 'string' },
       exclude: { type: 'string', default: '' },
+      'exclude-branches': { type: 'string', default: 'dev,develop,staging' },
       execute: { type: 'boolean', default: false },
       yes: { type: 'boolean', default: false },
       comment: { type: 'boolean', default: false },
@@ -217,7 +231,7 @@ async function main() {
     process.exit(2);
   }
   if (!values.repo || !values.budget) {
-    console.error('usage: payout --repo owner/name --budget 3 [--since 7d] [--exclude a,b] [--payer connect|dynamic] [--token SYM|0x…] [--round label] [--skip-resolve] [--execute] [--comment]');
+    console.error('usage: payout --repo owner/name --budget 3 [--since 7d] [--exclude a,b] [--exclude-branches dev,develop] [--payer connect|dynamic] [--token SYM|0x…] [--round label] [--skip-resolve] [--execute] [--comment]');
     process.exit(2);
   }
 
@@ -248,6 +262,7 @@ async function main() {
     since: parseSince(values.since),
     budget: values.budget,
     exclude: values.exclude.split(',').map((s) => s.trim()).filter(Boolean),
+    excludeBranches: values['exclude-branches'].split(',').map((s) => s.trim()).filter(Boolean),
     execute: values.execute,
     yes: values.yes,
     comment: values.comment,
